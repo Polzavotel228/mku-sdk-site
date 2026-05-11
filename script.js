@@ -408,16 +408,15 @@ async function renderNews() {
 }
 
 async function renderContacts() {
-    setTimeout(() => { try { initMap(); } catch(e) { console.error('Карта не загрузилась'); } }, 200);
     return `
         <div class="section">
             <h1 class="section-title">Контакты</h1>
             <div class="contacts-grid">
                 <div class="contacts-card">
                     <h3>📋 Реквизиты</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> г. Калуга, ул. Ленина, 1</p>
-                    <p><i class="fas fa-phone"></i> <a href="tel:+74842123456">+7 (4842) 12-34-56</a></p>
-                    <p><i class="fas fa-envelope"></i> <a href="mailto:info@sdk.ru">info@sdk.ru</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> г. Калуга, ул. Ленина, 19</p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+74845656240">+7 (48456) 5-62-40</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:mu.sdk@yandex.ru">mu.sdk@yandex.ru</a></p>
                     <p><i class="fas fa-building"></i> ИНН: 4029001234</p>
                     <p><i class="fas fa-building"></i> КПП: 402901001</p>
                     <p><i class="fas fa-building"></i> ОГРН: 1234567890123</p>
@@ -430,7 +429,15 @@ async function renderContacts() {
                 </div>
                 <div class="contacts-card">
                     <h3>📍 Мы на карте</h3>
-                    <div class="map-container" id="map" style="height:250px; border-radius:16px;"></div>
+                    <div style="border-radius:16px; overflow:hidden; height:250px; margin-bottom:12px;">
+                        <iframe 
+                            src="https://yandex.ru/profile/182055776484?lang=ru&no-distribution=1&view-state=mini&source=wizbiz_new_map_single"
+                            width="100%" 
+                            height="100%" 
+                            frameborder="0" 
+                            style="border:0;">
+                        </iframe>
+                    </div>
                 </div>
             </div>
         </div>
