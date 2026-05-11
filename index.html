@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
+    <title>МКУ «СДК» | Сельские дома культуры</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script src="https://yandex.ru/profile/182055776484?lang=ru&no-distribution=1&view-state=mini&source=wizbiz_new_map_single"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="content-wrapper">
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo" id="logo">
+                  <!--  <div class="logo-icon">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                     -->
+                    <img src="images/logo.png" alt="Логотип МКУ «СДК»">
+                    <div class="logo-text">
+                        <h1>МКУ «СДК»</h1>
+                        <p>Сельские дома культуры</p>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+                <nav class="nav" id="nav">
+                    <a data-page="home">Главная</a>
+                    <a data-page="branches">Филиалы</a>
+                    <a data-page="events">Мероприятия</a>
+                    <a data-page="collectives">Коллективы</a>
+                    <a data-page="news">Новости</a>
+                    <a data-page="contacts">Контакты</a>
+                    <a data-page="admin" class="admin-link">🔒 Админ</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container" id="page-content">
+            <div class="loading">Загрузка...</div>
+        </div>
+    </main>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>МКУ «СДК»</h4>
+                <p><i class="fas fa-heart"></i> Развитие творчества и досуга</p>
+                <p><i class="fas fa-calendar-alt"></i> События для всей семьи</p>
+                <div class="social-links">
+                    <a href="#" id="vkLink" target="_blank"><i class="fab fa-vk"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Контакты</h4>
+                <a href="tel:+74842123456"><i class="fas fa-phone"></i> +7 (4842) 12-34-56</a>
+                <a href="mailto:info@sdk.ru"><i class="fas fa-envelope"></i> info@sdk.ru</a>
+                <a href="#" id="footerAddress"><i class="fas fa-map-marker-alt"></i> Калуга, ул. Ленина, 19</a>
+            </div>
+            <div class="footer-col">
+                <h4>Режим работы</h4>
+                <p><i class="fas fa-clock"></i> Пн-Пт: 08:00 - 17:00</p>
+                <p><i class="fas fa-clock"></i> обед: 13:00 - 14:00</p>
+                <p><i class="fas fa-clock"></i> Сб-Вс: выходной</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 МКУ «Сельские дома культуры» | Все права защищены</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Модальное окно -->
+<div id="modal" class="modal" onclick="if(event.target===this) closeModal()">
+    <div class="modal-content">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <div id="modalBody"></div>
+    </div>
+</div>
+
+<!-- Админ-модалка для редактирования -->
+<div id="editModal" class="modal" onclick="if(event.target===this) closeEditModal()">
+    <div class="modal-content" style="max-width: 600px;">
+        <span class="modal-close" onclick="closeEditModal()">&times;</span>
+        <div id="editModalBody"></div>
+    </div>
+</div>
+
+<script src="script.js" type="module"></script>
+</body>
+</html>
