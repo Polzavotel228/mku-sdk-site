@@ -682,3 +682,48 @@ body {
     padding-bottom: 8px;
     border-bottom: 1px dashed #e2e8f0;
 }
+
+/* Кнопка мобильного меню */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #1b4d3e;
+    cursor: pointer;
+    padding: 8px;
+    transition: all 0.2s;
+}
+
+.mobile-menu-btn:hover {
+    transform: scale(1.05);
+    color: #2d6a4f;
+}
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 8px;
+        padding: 16px;
+        background: white;
+        border-radius: 20px;
+        margin-top: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    
+    .nav.open {
+        display: flex;
+    }
+    
+    .nav a {
+        text-align: center;
+        padding: 12px;
+    }
+}
